@@ -3,8 +3,9 @@
 
 Plugin per navigazioni in Ajax senza troppe complicazioni.
 
-Utilizzo
+### Utilizzo
 
-Demo
+### Demo
 
-Crediti
+### Crediti
+Realizzato da [Salvatore Laisa](http://www.salvatorelaisa.net/), rilasciato con licenza GNU General Public License v3.
