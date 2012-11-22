@@ -21,7 +21,7 @@ GNU General Public License for more details.
 		
 		// Predefiniti plugin
 		var defaults = {
-			'data-ns':		'data-pr',	// Attributo da assegnare agli elementi
+			'ns':			'data-pr',	// Attributo da assegnare agli elementi
 			'nav':			'nav',		// Valore per elementi di navigazione
 			'contenuto':	'contenuto',// Valore per elemento dove vengono caricati i contenuti
 		};
@@ -33,10 +33,12 @@ GNU General Public License for more details.
 		jQuery(document).on('ready',function(){
 			
 			// Click sugli elementi con attributo data-pr="nav"
-			jQuery('*['+ opzioni.data-ns +'="'+ opzioni.nav +'"]').on('click',function(e){
+			jQuery('*['+ opzioni.ns +'="'+ opzioni.nav +'"]').on('click',function(e){
 				e.preventDefault();						// Blocco il comportamento di default
 				var url = jQuery(this).attr('href');	// Memorizzo l'url
-				var destinazione = jQuery('*['+ opzioni.data-ns +'="'+ opzioni.contenuto +'"]');
+				console.log(url);
+				var destinazione = jQuery('*['+ opzioni.ns +'="'+ opzioni.contenuto +'"]');
+				destinazione.children().remove();		// Svuoto il contenuto precedente
 				destinazione.load(url);					// Carica il contenuto
 			});	// Fine click
 			
